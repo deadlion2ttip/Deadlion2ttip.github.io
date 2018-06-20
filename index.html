@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
-<style>
+<!-- <style>
     body {
+        box-sizing: border-box;
         font-size: 16pt;
         margin:0%;
         background-color: rgb(193, 250, 185);
@@ -13,17 +14,15 @@
         border-style: outset;
         height: 300px;
         float: right;
-        
-            
     }
-    
     header {
         background-color: #ceefee;
         width:100%;
         min-height:60px;
         margin:0%;
         border:0%;
-        padding:1%;
+        padding-top:10px;
+        padding-bottom: 10px;
         vertical-align: top;
         }
     #name {
@@ -38,16 +37,20 @@
         font-family: 'Fjalla One', sans-serif;
         color: slategray;
         float: left;
-        margin-left:2%
+        margin-left:12px
     }
     #headerbreak {
         margin-top:0%;
     }
-    
-</style>
+    section {
+        float:left;
+    }
+</style> -->
+
 <html>
     <head>
         <title>There's a new programmer in town!</title>
+        <link href="index.css" rel="stylesheet" type="text/css">
             <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"> 
     </head>
     <body>
@@ -60,6 +63,7 @@
     </div>
 </header>
 <hr id='headerbreak'>
+<aside>
 <a href='https://youtu.be/z8pknnncODo' target="_blank">
     <img id="portrait" src="images/Chicken.jpg" alt='Christopher Griffin holding a small brown chicken.'>
 </a>
@@ -71,8 +75,10 @@
 <ul>
     <li><a href="https://github.com/djmorosini/zorkington" target="_blank">Zorkington</a>: a basic text based adventure made made in node at Burlington Code Academy.</li>
 </ul>
-<p><strong>About Chris:</strong><br>
+</aside>
+<section>
+<strong>About Chris:</strong><br>
     Currently a student at Burlington Code Academy, Chris has worked an assortment of positions in his professional life. He solved client IT problems for four years as a member of the University of Vermont's Techteam while earning bachelors degrees in wildlife biology and psychology. Since graduation he has tracked tortoises in the mojave desert, taught curious learners of all ages at an outdoor education center in Bethlehem, New York, and researched raccoons around Burlington's urban landscape. He regrets leaving the natural resorces field due to a lack of opportunity, but looks forward to solving a new set of challanges in a new field. His passions include hiking, puzzles, folk dance, and playing way too much Overwatch.
-</p>
+</section>
 </body>
 </html>
