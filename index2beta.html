@@ -1,12 +1,31 @@
  <!DOCTYPE html>
+ <style>
+body {
+    background: url("images/indexphotos/deathvalley.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+ </style>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Shrikhand" rel="stylesheet">
     <title>Solving Problems With Positivity</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
-    
+    <script>
+let picPathArray = ['deathvalley.jpg', 'guard.jpg', 'sunset.jpg']
+
+function randomBackground() {
+    let randIndex = Math.floor(Math.random() * picPathArray.length)
+    let picPathEnd = picPathArray[randIndex]
+    return picPathEnd
+}
+
+function setBackground() {
+   body = document.getElementsByTagName('body')[0]
+   body.style = 'background: url("images/indexphotos/' + randomBackground() + '") no-repeat center center fixed; \n background-size: cover;'
+    console.log(body.style)
+}
+setBackground()
+</script>
 </body>
 </html>
