@@ -44,6 +44,15 @@ nav {
     display: flex;
     justify-content:space-evenly;
 }
+.menuItem {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.menuItem:hover {
+    color: rgb(61, 216, 255);
+    text-decoration: none;
+    text-shadow: black 4px 2px 2px;
+}
  </style>
 <html>
 <head>
@@ -53,7 +62,11 @@ nav {
 <body>
     <div id='contentwindow'>
 <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
-<nav><a href='About.html'><p>About Chris</p></a><p>Contact</p><p>Projects</p></nav>
+<nav>
+    <a href='About.html' class='menuItem'><p class='menuItem'>About Chris</p></a>
+    <p class='menuItem'>Contact</p>
+    <p class='menuItem'>Projects</p>
+</nav>
     </div>
     
     <script>
