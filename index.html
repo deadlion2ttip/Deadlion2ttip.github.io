@@ -57,11 +57,12 @@ nav {
     </div>
     
     <script>
-let picPathArray = ['birdprints.JP', 'bigbend.JP', 'yosemite.JP', 'carlsbad2.JP', 'carlsbad1.JP', 'pharaohmountain.JP', 'forrestedcanyon.JP', 'scrubplains.JP', 'arch.JP', 'coyote.JP', 'deathvalley.JP','MesaVerde.JP', 'grandcanyon.JP', 'Pharaohlake.JP', 'sandwaves.JP','zion.JP', 'footprints.JP', 'redclay.JP', 'rainbow.JP','contrast.JP', 'landing.JP', 'sunset.JP']
+let picPathArray = ['birdprints.JPG', 'bigbend.JPG', 'yosemite.JPG', 'carlsbad2.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'deathvalley.JPG','MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','zion.JPG', 'footprints.JPG', 'redclay.JPG', 'rainbow.JPG','contrast.JPG', 'landing.JPG', 'sunset.JPG']
 
 function randomBackground() {
     let randIndex = Math.floor(Math.random() * picPathArray.length)
     let picPathEnd = picPathArray[randIndex]
+    console.log(picPathEnd)
     return picPathEnd
 }
 
