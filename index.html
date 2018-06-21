@@ -57,7 +57,7 @@ nav {
     </div>
     
     <script>
-let picPathArray = ['birdprints.jpg', 'bigbend.jpg', 'yosemite.jpg', 'carlsbad2.jpg', 'carlsbad1.jpg', 'pharaohmountain.jpg', 'forrestedcanyon.jpg', 'scrubplains.jpg', 'arch.jpg', 'coyote.jpg', 'deathvalley.jpg','MesaVerde.jpg', 'grandcanyon.jpg', 'Pharaohlake.jpg', 'sandwaves.jpg','zion.jpg', 'footprints.jpg', 'redclay.jpg', 'rainbow.jpg','contrast.jpg', 'landing.jpg', 'sunset.jpg']
+let picPathArray = ['birdprints.JP', 'bigbend.JP', 'yosemite.JP', 'carlsbad2.JP', 'carlsbad1.JP', 'pharaohmountain.JP', 'forrestedcanyon.JP', 'scrubplains.JP', 'arch.JP', 'coyote.JP', 'deathvalley.JP','MesaVerde.JP', 'grandcanyon.JP', 'Pharaohlake.JP', 'sandwaves.JP','zion.JP', 'footprints.JP', 'redclay.JP', 'rainbow.JP','contrast.JP', 'landing.JP', 'sunset.JP']
 
 function randomBackground() {
     let randIndex = Math.floor(Math.random() * picPathArray.length)
@@ -70,7 +70,7 @@ function setBackground() {
    body.style = 'background: url("images/indexphotos/' + randomBackground() + '") no-repeat center center fixed; \n background-size: cover;'
     console.log(body.style)
 }
-<!-- setBackground() -->
+setBackground()
 </script>
 </body>
 </html>
