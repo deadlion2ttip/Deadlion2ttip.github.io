@@ -74,7 +74,9 @@
         log = document.getElementById('log')
         log.innerHTML = ''
         startGame();
-        say(currentRoom + "<br>" + rooms[currentRoom]["description"])
+        let playerInputField = document.getElementById('playerInput')
+        playerInputField.value = ''
+        say(currentRoom + "\n" + rooms[currentRoom]["description"])
     }
     function submit() {
         let playerInputField = document.getElementById('playerInput')
@@ -84,8 +86,8 @@
     }
     function say(message) {
         log = document.getElementById('log')
-        log.innerHTML += '' + message + '<br>'
+        log.innerText += '' + message + '\n'
     }
-    say(currentRoom + "<br>" + rooms[currentRoom]["description"])
+    say(currentRoom + "\n" + rooms[currentRoom]["description"])
 </script>
 </html>

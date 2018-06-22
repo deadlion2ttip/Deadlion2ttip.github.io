@@ -55,14 +55,14 @@ key = "12345"
 doorLocked = true
 playerInventory = []
 }
-
+startGame()
 function mainGame(chunk) {
     log = document.getElementById('log')
     log.innerHTML = ''
-    say('Current location: ' + currentRoom + '<br>')
+    say('Current location: ' + currentRoom + '\n')
     let playerInput = chunk.toString().trim();
     let firstWordOfInput = playerInput.split(' ').shift().toString()
-    say("<br>")
+    say("\n")
     
     if (potentialCommands.checkInventory.includes(playerInput)) {
         inventory()
@@ -94,7 +94,7 @@ function changeRoom(newRoom) {
     let validTransitions = rooms[currentRoom].canChangeTo;
     if (validTransitions.includes(newRoom)) {
         currentRoom = newRoom;
-        say('<br>Current room: ' + currentRoom + "<br>" + rooms[currentRoom]['description'] + "<br>")
+        say('Current room: ' + currentRoom + "\n" + rooms[currentRoom]['description'] + "\n")
     } else {
         say("Invalid state transition attempted - from " + currentRoom + " to " + newRoom);
     }
