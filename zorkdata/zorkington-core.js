@@ -4,23 +4,23 @@ let rooms = {
         'description': "You are standing on Main Street between Church and South Winooski. There is a door here. A keypad sits on the handle. On the door is a handwritten sign.",
         'inventory': ['dog poop', 'quarter'],
         'interactible items': {   //I think it would be pretty easy to add interactable items to a room object and give them a description and a list of actions players can take with them (functions). Then we can build a 'look at item' function and it helps keep the room if else functions clean.
-            door: {
-                'description': 'The door is locked. There is a keypad on the handle.',
-                'open': function() {
-                    {
-                        say('The door is locked. There is a keypad on the handle. What will you enter into the keypad?');
-                        openDoor();
-                    }
+        door: {
+            'description': 'The door is locked. There is a keypad on the handle.',
+            'open': function() {
+                {
+                    say('The door is locked. There is a keypad on the handle. What will you enter into the keypad?');
+                    openDoor();
                 }
             }
-            
         }
-    },
-    '182 Main St. - Foyer': {
-        canChangeTo: ["182 Main st."],
-        'description': "You are in a foyer. Or maybe it\'s an antechamber. Or a vestibule. Or an entryway. Or an atrium. Or a narthex. But let\'s forget all that fancy flatlander vocabulary, and just call it a foyer. In Vermont, this is pronounced 'FO-ee-yurr'. A copy of Seven Days lies in a corner. A set of stairs leads up to another floor. A door leads outside.",
-        'inventory': ['Seven Days']
+        
     }
+},
+'182 Main St. - Foyer': {
+    canChangeTo: ["182 Main st."],
+    'description': "You are in a foyer. Or maybe it\'s an antechamber. Or a vestibule. Or an entryway. Or an atrium. Or a narthex. But let\'s forget all that fancy flatlander vocabulary, and just call it a foyer. In Vermont, this is pronounced 'FO-ee-yurr'. A copy of Seven Days lies in a corner. A set of stairs leads up to another floor. A door leads outside.",
+    'inventory': ['Seven Days']
+}
 }
 
 potentialCommands = {
@@ -35,7 +35,7 @@ let items = {
         'alternate names':['paper', 'seven days', 'Seven Days','Paper', 'newspaper', 'days', 'Days'],
         'description': "Vermont's Alt-Weekly",
         'onPickUp': 'You pick up the paper and leaf through it looking for comics and ignoring the articles, just like everybody else does.'
-            },
+    },
     'dog poop': {
         'alternate names':['poop','shit', 'Poop', 'dog poop', 'turd'],
         'description': 'Brown. Smelly. Literal poop from a dog. I don\'t know what you were expecting.',
@@ -48,11 +48,13 @@ let items = {
     }
 }
 
-let currentRoom = "182 Main st."
-let interactables = rooms[currentRoom]['interactible items'];
-let key = "12345"
-let doorLocked = true
-let playerInventory = []
+function startGame() {
+currentRoom = "182 Main st."
+interactables = rooms[currentRoom]['interactible items'];
+key = "12345"
+doorLocked = true
+playerInventory = []
+}
 
 function mainGame(chunk) {
     log = document.getElementById('log')
@@ -61,7 +63,7 @@ function mainGame(chunk) {
     let playerInput = chunk.toString().trim();
     let firstWordOfInput = playerInput.split(' ').shift().toString()
     say("<br>")
-
+    
     if (potentialCommands.checkInventory.includes(playerInput)) {
         inventory()
     } else if (playerInput == "look around") {
@@ -71,20 +73,20 @@ function mainGame(chunk) {
     } else if (potentialCommands.take.includes(firstWordOfInput)){
         take(playerInput)
     } else if (currentRoom == "182 Main st.") {
-
+        
         mainStActions(playerInput);
-
+        
     } else if (currentRoom = "182 Main St. - Foyer") {
-
+        
         foyerActions(playerInput);
     }
 }
 
 function lookAround() {
     say(rooms[currentRoom]["description"])
-
+    
     if (rooms[currentRoom]['inventory'].length > 0){
-    say(" You see " + rooms[currentRoom]['inventory'] + ".");
+        say(" You see " + rooms[currentRoom]['inventory'] + ".");
     }
 }
 
@@ -101,28 +103,28 @@ function changeRoom(newRoom) {
 
 
 function mainStActions(playerInput) {
-     if (playerInput == "read sign") {
+    if (playerInput == "read sign") {
         say('The sign says "Welcome to Burlington Code Academy! Come on up to the second floor. If the door is locked, use the code 12345."');
     } else if (playerInput == "take sign") {
         say("That would be selfish. How will other students find their way?");
     } else if (playerInput == "open door") {    //Here's an example of calling that function on the door
-            interactables.door['open']()
-    } else if (playerInput.startsWith('key in') || playerInput.startsWith('enter code')) {
-        if (key == playerInput.match('12345')) {
-            say('Success! The door opens. You enter the foyer and the door shuts behind you.');
-            changeRoom("182 Main St. - Foyer");
-        } else {
-            say('Bzzzzt! The door is still locked.');
-        }
-    } else if (playerInput === ''){
-        say('Please provide a command.')
+    interactables.door['open']()
+} else if (playerInput.startsWith('key in') || playerInput.startsWith('enter code')) {
+    if (key == playerInput.match('12345')) {
+        say('Success! The door opens. You enter the foyer and the door shuts behind you.');
+        changeRoom("182 Main St. - Foyer");
     } else {
-        say("Sorry, I don't know how to " + playerInput + ".");
+        say('Bzzzzt! The door is still locked.');
     }
+} else if (playerInput === ''){
+    say('Please provide a command.')
+} else {
+    say("Sorry, I don't know how to " + playerInput + ".");
+}
 }
 
 function foyerActions(playerInput) {
-     if (playerInput == "go back") {
+    if (playerInput == "go back") {
         changeRoom("182 Main st.")
     } else {
         say("Sorry, I don't know how to " + playerInput + ".");

@@ -21,11 +21,12 @@
     #playerInput {
         font-size: 16pt;
         grid-row: 2;
-        height: 25%;
+        height: 250px;
         width: 75%;
     }
     #buttons {
         grid-row:3;
+        height:75px;
         display: flex;
         justify-content: space-evenly;
     }
@@ -34,10 +35,12 @@
         border-style: solid;
         border-width: 2px;
         border-color: red;
-        height: 35%;
+        height: 300px;
         width: 85%;
         grid-row: 4;
-        margin: 2.5%
+        margin: 2.5%;
+        overflow: scroll;
+        scroll-behavior:auto;
     }
     .centerflexbox {
         display: flex;
@@ -53,11 +56,10 @@
 <body>
     <section>
         <div class='centerflexbox'><h1>ZORKINGTON</h1></div>
-        <div class='centerflexbox'><textarea id="playerInput" placeholder="Input commands here! Use i to check Inventory. Use look around to check your surroundings.">
-        </textarea></div>
+        <div class='centerflexbox'><textarea id="playerInput" placeholder="Input commands here! Use i to check Inventory. Use look around to check your surroundings."></textarea></div>
         <div id='buttons'>
             <button id='submit' class='button' onclick="submit()">Submit!</button>
-            <button id='newGame' class='button'>New Game</button>
+            <button id='newGame' class='button' onclick="newGame()">New Game</button>
         </div>
         <div class='centerflexbox'><div id="log">
             
@@ -67,6 +69,13 @@
 <script src='zorkington-core.js'>
 </script>
 <script>
+    startGame()
+    function newGame(){
+        log = document.getElementById('log')
+        log.innerHTML = ''
+        startGame();
+        say(currentRoom + "<br>" + rooms[currentRoom]["description"])
+    }
     function submit() {
         let playerInputField = document.getElementById('playerInput')
         let playerInput = playerInputField.value
