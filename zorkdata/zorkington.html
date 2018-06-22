@@ -1,0 +1,82 @@
+<!DOCTYPE>
+<style>
+    body {
+        background: black;
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+    }
+    section {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 30% 10% 40%;
+    }
+    h1 {
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 70pt;
+        grid-row: 1;
+    }
+    #playerInput {
+        font-size: 16pt;
+        grid-row: 2;
+        height: 25%;
+        width: 75%;
+    }
+    #buttons {
+        grid-row:3;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #log {
+        font-size: 16pt;
+        border-style: solid;
+        border-width: 2px;
+        border-color: red;
+        height: 35%;
+        width: 85%;
+        grid-row: 4;
+        margin: 2.5%
+    }
+    .centerflexbox {
+        display: flex;
+        justify-content: center;
+    }
+    
+</style>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <title>A Text Based Adventure in the Land of Burlington</title>
+</head>
+<body>
+    <section>
+        <div class='centerflexbox'><h1>ZORKINGTON</h1></div>
+        <div class='centerflexbox'><textarea id="playerInput" placeholder="Input commands here! Use i to check Inventory. Use look around to check your surroundings.">
+        </textarea></div>
+        <div id='buttons'>
+            <button id='submit' class='button' onclick="submit()">Submit!</button>
+            <button id='newGame' class='button'>New Game</button>
+        </div>
+        <div class='centerflexbox'><div id="log">
+            
+        </div></div>
+    </section>
+</body>
+<script src='zorkington-core.js'>
+</script>
+<script>
+    function submit() {
+        let playerInputField = document.getElementById('playerInput')
+        let playerInput = playerInputField.value
+        mainGame(playerInput)
+        playerInputField.value = ''
+    }
+    function say(message) {
+        log = document.getElementById('log')
+        log.innerHTML += '' + message + '<br>'
+    }
+    say(currentRoom + "<br>" + rooms[currentRoom]["description"])
+</script>
+</html>
