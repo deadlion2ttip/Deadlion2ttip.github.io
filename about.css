@@ -3,7 +3,7 @@
         box-sizing: border-box;
         font-size: 16pt;
         margin:0%;
-        background: url('images/aboutbackground.JPG') no-repeat center center fixed;
+        background: url('images/aboutbackground.jpg') no-repeat center center fixed;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
     #portrait {
@@ -39,6 +39,12 @@
         float: left;
         margin-left:12px
     }
+    nav {
+        float: right;
+        width: 400px;
+        display: flex;
+        justify-content: space-evenly;
+    }
     #headerbreak {
         margin-top:0%;
     }
@@ -47,4 +53,11 @@
         float:left;
         width:60%;
         height: auto;
+    }
+    .navbar {
+        text-decoration: none;
+        color: slategray;
+    }
+    .navbar:hover {
+        color: rgb(0, 0, 0);
     }
