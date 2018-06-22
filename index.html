@@ -1,60 +1,59 @@
  <!DOCTYPE html>
  <style>
-body {
-    background: url("images/indexphotos/deathvalley.JPG") no-repeat center center fixed;
-    background-size: cover;
-    
-}
-#contentwindow {
-    background: rgba(25, 25, 25, 0.5);
-    margin: auto;
-    box-sizing: border-box;
-    border-radius: 8%;
-    width:90%;
-    height:90%;
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    position:absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    vertical-align:middle;
-    color: white;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 20pt;
-}
-#name {
-    font-family: 'Shrikhand', cursive;
-    font-size: 80px;
-    font-weight: 500;
-    color:whitesmoke;
-    grid-row: 3;
-    margin-left: auto;
-    margin-right: auto;
-}
-.flexbox {
-    grid-row: 2;
-    display: flex;
-    justify-content: center;
-}
-nav {
-    grid-row:4;
-    align-self: flex-end;
-    display: flex;
-    justify-content:space-evenly;
-}
-.menuItem {
-    color: whitesmoke;
-    text-decoration: none;
-}
-.menuItem:hover {
-    color: rgb(61, 216, 255);
-    text-decoration: none;
-    text-shadow: black 4px 2px 2px;
-}
- </style>
+    body {
+        background: url("images/indexphotos/deathvalley.JPG") no-repeat center center fixed;
+        background-size: cover;     
+    }
+    #contentwindow {
+        background: rgba(25, 25, 25, 0.5);
+        margin: auto;
+        box-sizing: border-box;
+        border-radius: 8%;
+        width:90%;
+        height:90%;
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        position:absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        vertical-align:middle;
+        color: white;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20pt;
+    }
+    #name {
+        font-family: 'Shrikhand', cursive;
+        font-size: 80px;
+        font-weight: 500;
+        color:whitesmoke;
+        grid-row: 3;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flexbox {
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+    }
+    nav {
+        grid-row:4;
+        align-self: flex-end;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    .menuItem {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    .menuItem:hover {
+        color: rgb(61, 216, 255);
+        text-decoration: none;
+        text-shadow: black 4px 2px 2px;
+    }
+</style>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Shrikhand" rel="stylesheet">
@@ -62,39 +61,39 @@ nav {
 </head>
 <body>
     <div id='contentwindow'>
-<div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
-<nav>
-    <a href='About.html' class='menuItem'><p class='menuItem'>About Chris</p></a>
-    <p class='menuItem'>Contact</p>
-    <p class='menuItem'>Projects</p>
-</nav>
+        <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
+        <nav>
+            <a href='about.html' class='menuItem'><p class='menuItem'>About Chris</p></a>
+            <p class='menuItem'>Contact</p>
+            <a href='projects.html' class='menuItem'><p>Projects</p></a>
+        </nav>
     </div>
     
     <script>
-let picPathArray = ['birdprints.JPG', 'bigbend.JPG', 'yosemite.JPG', 'carlsbad2.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'deathvalley.JPG','MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','zion.JPG', 'footprints.JPG', 'redclay.JPG', 'rainbow.JPG','contrast.JPG', 'landing.JPG', 'sunset.JPG']
-
-
-function setBackground() {
-   body = document.getElementsByTagName('body')[0]
-   body.style = 'background: url("images/indexphotos/' + randomBackground() + '") no-repeat center center fixed; \n background-size: cover;'
-    console.log(body.style)
-}
-let pictureIndex=0;
-function backgroundScroll() {
-
-    setInterval(setBackground, 10000)
-}
-
-function randomBackground() {
-    if (pictureIndex >= picPathArray.length){
-        pictureIndex = 0;
-    }
-    let picPathEnd = picPathArray[pictureIndex]
-    pictureIndex++
-    console.log(picPathEnd)
-    return picPathEnd
-}
-backgroundScroll()
-</script>
+        let picPathArray = ['birdprints.JPG', 'bigbend.JPG', 'yosemite.JPG', 'carlsbad2.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'deathvalley.JPG','MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','zion.JPG', 'footprints.JPG', 'redclay.JPG', 'rainbow.JPG','contrast.JPG', 'landing.JPG', 'sunset.JPG']
+        
+        
+        function setBackground() {
+            body = document.getElementsByTagName('body')[0]
+            body.style = 'background: url("images/indexphotos/' + randomBackground() + '") no-repeat center center fixed; \n background-size: cover;'
+            console.log(body.style)
+        }
+        let pictureIndex=0;
+        function backgroundScroll() {
+            
+            setInterval(setBackground, 10000)
+        }
+        
+        function randomBackground() {
+            if (pictureIndex >= picPathArray.length){
+                pictureIndex = 0;
+            }
+            let picPathEnd = picPathArray[pictureIndex]
+            pictureIndex++
+            console.log(picPathEnd)
+            return picPathEnd
+        }
+        backgroundScroll()
+    </script>
 </body>
 </html>
