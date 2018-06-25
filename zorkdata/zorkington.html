@@ -88,6 +88,21 @@
         log = document.getElementById('log')
         log.innerText += '' + message + '\n'
     }
+    function clearInput() {
+        let playerInputField = document.getElementById('playerInput')
+        let playerInput = playerInputField.value
+        playerInputField.value = ''
+    }
+    function listenForEnter() {
+        let playerInputField = document.getElementById('playerInput')
+        playerInputField.addEventListener('keypress', function(event) {
+            let key = event.keyCode || event.which;
+            if (key === 13) {
+                submit();
+            }
+        })
+    }
+    listenForEnter()
     say(currentRoom + "\n" + rooms[currentRoom]["description"])
 </script>
 </html>

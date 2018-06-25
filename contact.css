@@ -25,6 +25,7 @@ header {
     padding-top:10px;
     padding-bottom: 10px;
     vertical-align: top;
+    display: relative;
 }
 #name {
     font-size: 36pt; 
@@ -32,13 +33,15 @@ header {
     color: slategray;
     float: left;
     margin-left:2%;
+    display: absolute;
 }
 #contact {
     font-size: 12pt !important;
     font-family: 'Fjalla One', sans-serif;
     color: slategray;
     float: left;
-    margin-left:12px
+    margin-left:12px;
+    display: absolute;
 }
 nav {
     float: right;
