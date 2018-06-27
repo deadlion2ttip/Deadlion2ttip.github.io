@@ -42,7 +42,7 @@
         float: right;
         width: 400px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     #headerbreak {
         margin-top:0%;
@@ -58,10 +58,14 @@
         height: auto;
         order: -1;
     }
+
     .navbar {
         text-decoration: none;
         color: slategray;
     }
     .navbar:hover {
         color: rgb(0, 0, 0);
+    }
+    .activePage {
+        color: black;
     }

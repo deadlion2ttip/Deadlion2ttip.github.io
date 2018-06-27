@@ -47,7 +47,7 @@ nav {
     float: right;
     width: 400px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .navbar {
     text-decoration: none;
@@ -55,6 +55,9 @@ nav {
 }
 .navbar:hover {
     color: rgb(0, 0, 0);
+}
+.activePage {
+    color: black;
 }
 #headerbreak {
     margin-top:0%;
@@ -77,7 +80,7 @@ h3 {
 .exampleJustify{
     grid-row:2;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 35%;
     margin: 2.5%;
     width: 95%;
