@@ -47,18 +47,35 @@
     .menuItem {
         color: whitesmoke;
         text-decoration: none;
+        margin-bottom: 0px;
     }
-    .menuItem:hover {
-        color: rgb(61, 216, 255);
-        text-decoration: none;
-        text-shadow: black 4px 2px 2px;
-    }
+    
     #contact{
         text-decoration: none;
         font-family: 'Shrikhand', cursive;
         color:whitesmoke;
         text-align: center;
         margin-top:20px;
+    }
+
+    .button{
+        border-width: 4px;
+        border-style:solid;
+        border-color: white;
+        border-radius: 12%;
+        padding: 0px 5px;
+    }
+    .button:hover{
+        border-color: rgb(61, 216, 255);
+        text-decoration: none;
+    }
+    .button:hover p {
+        color: rgb(61, 216, 255);
+        text-decoration: none;
+        text-shadow: black 4px 2px 2px;
+    }
+    p{
+        margin: 0px !important;
     }
 
 </style>
@@ -75,7 +92,7 @@
             <a class='menuItem' href="mailto:cisaacgriffin@gmail.com"> cisaacgriffin@gmail.com </a>
         </div>
         <nav>
-            <a href='About.html' class='menuItem button'><p class='menuItem'>About Chris</p></a>
+            <a href='About.html' class='menuItem button'><p>About Chris</p></a>
             <a href='projects.html' class='menuItem button'><p>Projects</p></a>
             <a href='contact.html' class='menuItem button'><p>Social Media</p></a>
         </nav>
