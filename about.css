@@ -69,3 +69,8 @@
     .activePage {
         color: black;
     }
+    .map{
+        margin-top: 20px;
+        height: 400px;
+        width: 400px;
+    }
