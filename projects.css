@@ -88,7 +88,7 @@ h3 {
 .projectContainer{
     height: 350px;
     width: 300px;
-    margin: 20px;
+    margin: 20px 30px;
 }
 a {
     text-decoration: none;
