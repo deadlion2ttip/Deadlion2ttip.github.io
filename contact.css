@@ -4,6 +4,7 @@ body {
     font-size: 16pt;
     margin:0%;
     background: url('images/contactbackground.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .imagelink {
