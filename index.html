@@ -26,7 +26,7 @@
     }
     #name {
         font-family: 'Shrikhand', cursive;
-        font-size: 70px;
+        font-size: 70pt;
         font-weight: 500;
         color:whitesmoke;
         text-align: center;
@@ -88,8 +88,24 @@
     p{
         margin: 0px !important;
     }
-    
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width:600px) and (max-width: 900px) {
+        #contentwindow {
+            font-size: 20pt;
+        }
+        #name {
+        font-size: 40pt;
+        font-weight: 500;
+    }
+
+    }
+    @media screen and (max-width: 600px) {
+        #contentwindow {
+            font-size: 12pt;
+        }
+        #name {
+        font-size: 26pt;
+        font-weight: 500;
+    }
         .button {
             width: 60%;
         }
