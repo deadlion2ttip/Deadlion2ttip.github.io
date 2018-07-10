@@ -86,10 +86,56 @@ h3 {
     margin: 0px 5% 0px 5%;
 }
 .projectContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 350px;
     width: 300px;
     margin: 20px 30px;
 }
+p{
+    text-align: center;
+}
 a {
     text-decoration: none;
+}
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+        width: 100%;
+        align-content: center
+    }
+    nav {
+        width: 100%;
+        margin: 0px;
+        justify-content: space-around;
+    }
+    #name{
+        font-size: 30pt;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+    }
+    section{
+        font-size: 12pt;
+    }
+    #body{
+        font-size: 12pt;
+    }
+    .exampleJustify{
+        margin: 0px;
+    }
+    .projectContainer{
+        height: auto;
+        width: 300px;
+        margin: 10px 0px;
+        border-bottom: 2px solid black;
+    }
+    h3{
+        font-size: 24pt
+    }
+    .imagelink{
+        width: 250px;
+        height: 175px;
+    }
 }
