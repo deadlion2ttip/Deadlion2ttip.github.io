@@ -8,10 +8,9 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .imagelink {
-    height: 200px;
-    width: 300px;
+    width: 100%;
 }
-.imagelink:Hover {
+.projectContainer:Hover {
     box-shadow: 0px 0px 3px;
     position: relative;
     bottom: 4px;
@@ -50,11 +49,14 @@ nav {
     justify-content: space-between;
     margin: 0px 20px;
 }
-.navbar {
+.navbar-nav {
+    width:100%
+}
+.sitenavbar {
     text-decoration: none;
     color: slategray;
 }
-.navbar:hover {
+.sitenavbar:hover {
     color: rgb(0, 0, 0);
 }
 .activePage {
@@ -63,12 +65,16 @@ nav {
 #headerbreak {
     margin-top:0%;
 }
+.jumbotron{
+    background-color: rgba(139, 139, 139, 0.6)
+}
+#projectSelector{
+    margin-bottom: 30px;
+}
 section {
     width:100%;
     height: 100%;
     font-family:Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-rows: 10% 40% 40%;
 }
 #headerDiv {
     grid-row:1;
@@ -76,7 +82,7 @@ section {
     justify-content: center;
 }
 h3 {
-    font-size: 30pt;
+    font-size: 24pt;
     text-align: center;
 }
 .exampleJustify{
@@ -87,12 +93,15 @@ h3 {
     margin: 0px 5% 0px 5%;
 }
 .projectContainer{
+    border: 1px solid lightgray;
+    border-radius: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 350px;
     width: 300px;
     margin: 20px 30px;
+    overflow: hidden;
+    background-color: rgb(185, 185, 185)
 }
 p{
     text-align: center;
@@ -100,6 +109,7 @@ p{
 a {
     text-decoration: none;
 }
+
 @media (max-width: 600px){
     header{
         flex-direction: column;
@@ -117,6 +127,7 @@ a {
         width: 100%;
         margin: 0px;
     }
+    
     section{
         font-size: 12pt;
     }
@@ -133,10 +144,6 @@ a {
         border-bottom: 2px solid black;
     }
     h3{
-        font-size: 24pt
-    }
-    .imagelink{
-        width: 250px;
-        height: 175px;
+        font-size: 15pt
     }
 }
