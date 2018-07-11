@@ -58,18 +58,26 @@ nav {
 }
 .sitenavbar:hover {
     color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 .activePage {
     color: black;
 }
 #headerbreak {
     margin-top:0%;
+    margin-bottom: 0px;
 }
+
 .jumbotron{
     background-color: rgba(139, 139, 139, 0.6)
 }
 #projectSelector{
-    margin-bottom: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 30px;
+    background-color: rgba(139, 139, 139, 0.6)
 }
 section {
     width:100%;
@@ -107,6 +115,9 @@ p{
     text-align: center;
 }
 a {
+    text-decoration: none;
+}
+a:hover{
     text-decoration: none;
 }
 
