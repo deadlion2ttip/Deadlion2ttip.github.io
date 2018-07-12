@@ -9,6 +9,7 @@ body {
 }
 .imagelink {
     width: 100%;
+    border-radius: 5%;
 }
 .hidden{
     display: none;
@@ -77,6 +78,7 @@ nav {
 #projectSelector{
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     padding-top: 30px;
@@ -85,6 +87,7 @@ nav {
 section {
     width:100%;
     height: 100%;
+    padding:0px !important;
     font-family:Arial, Helvetica, sans-serif;
 }
 #headerDiv {
@@ -123,6 +126,16 @@ a {
 a:hover{
     text-decoration: none;
 }
+#bannerImg{
+    width: 100%;
+}
+.row {
+    width: 100%;
+    margin:0px;
+}
+#projectImgDiv {
+    margin: 0px;
+}
 
 @media (max-width: 600px){
     header{
@@ -151,11 +164,10 @@ a:hover{
     .exampleJustify{
         margin: 0px;
     }
-    .projectContainer{
-        height: auto;
-        width: 300px;
-        margin: 10px 0px;
-        border-bottom: 2px solid black;
+    #projectSelector{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
     h3{
         font-size: 15pt
