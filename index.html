@@ -134,12 +134,13 @@
         </nav>
     </div>
     <script>
-        let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'deathvalley.JPG','MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','zion.JPG', 'redclay.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
+        let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'deathvalley.JPG','MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','Zion.JPG', 'redclay.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
         
         
         function setBackground() {
             body = document.getElementsByTagName('body')[0];
             body.style = 'background: url("images/compressed/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
+            // Cache large img in background, then when loaded, move on to next step.
             body.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
             console.log(body.style)
         }
