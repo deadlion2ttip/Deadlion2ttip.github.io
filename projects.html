@@ -22,25 +22,28 @@
     <section class='container-fluid'>
         <div class='row'>  
                 <div id='projectSelector'>
-                    <h5 id='Zorkington' class="projectName">
+                    <span class='activeProject projectName'><h5 id='Zorkington' class='button'>
                         Zorkington
-                    </h5>
-                    <h5 id='Pomodoro' class="projectName">
+                    </h5></span>
+                    <span class="projectName"><h5 id='Pomodoro' class="button">
                         Pomodoro Timer
-                    </h5>
-                    <h5 id='Yelpington' class="projectName">
+                    </h5></span>
+                    <span class="projectName"><h5 id='Yelpington' class="button">
                         Yelpington
-                    </h5>
+                    </h5></span>
+                    <!-- <span class="projectName"><h5 id='geoVermonter' class="projectName">
+                        Geo-Vermonter
+                    </h5></span> -->
                 </div>
             </div>
         <div id='projectImgDiv' class="jumbotron row jumbotron-fluid">
             <div class='row'>
             <a id='bannerImg' class='col-sm-5' href="zorkdata/zorkington.html" target="_blank">
-                <img class='imagelink show' src='images/zorkingtonthumbnailorig.bmp'>
+                <img class='imagelink show' src='images/zorkingtonthumbnailorig.png'>
             </a>
             <div class='col-sm-7' id='storyWindow'>
                 <p>
-                    Zorkington: a basic text based adventure made using hashes in JavaScript at Burlington Code Academy. <br>
+                        A text based adventure coded in JavaScript during week 3 at Burlington Code Academy. Using hashes and state machines, the game keeps track of actions available in each location and tracks a player inventory. <br>
                     <a href="https://github.com/djmorosini/zorkington" target="_blank">
                         Zorkington GitHub Page
                     </a>
@@ -76,6 +79,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script>
+        let projectDescriptions = {
+            'zorkington': "<p>A text based adventure coded in JavaScript during week 3 at Burlington Code Academy. Using hashes and state machines, the game keeps track of actions available in each location and tracks a player inventory. <br><a href='https://github.com/djmorosini/zorkington' target='_blank'>Zorkington GitHub Page</a></p>",
+            'pomodoro': "<p>A timer webapp based on the Pomodoro method coded in JavaScript and hosted on GitHub Pages. Created during week 5 at Burlington Code Academy.<br> <a href='https://github.com/deadlion2ttip/pomodoro' target='_blank'>Pomodoro GitHub Page</a></p>",
+            'yelpington': "A restaurant review site using Leaflet maps, OpenStreetMaps API, and using AJAX to load in data from JSON files. The map and index restaurant list construction are done on the fly using data from JSON files in the root folder. Hosted using Heroku. Created week 5 at Burlington Code academy.<br><a href='https://github.com/deadlion2ttip/yelpington'target='_blank'>Yelpington GitHub Page</a>",
+
+        }
         $('#Pomodoro').on('mouseover', function() {
             insertPomodoro();
         })
@@ -87,25 +96,39 @@
         $('#Yelpington').on('mouseover', function(){
             insertYelpington();
         })
-
+        
+        function resetActive(){
+            $('.activeProject').removeClass('activeProject')
+        }
         function insertZorkington(){
-            $('#bannerImg').html("<img class='imagelink hidden' src='images/zorkingtonthumbnailorig.bmp'>").prop('href', 'zorkdata/zorkington.html')
+        if (!$('#Zorkington').parent().hasClass('activeProject')){
+            resetActive();
+            $('#Zorkington').parent().addClass('activeProject')
+            $('#bannerImg').html("<img class='imagelink hidden' src='images/zorkingtonthumbnailorig.png'>").prop('href', 'zorkdata/zorkington.html')
             jQuery('.imagelink').fadeIn(400)
-            $('#storyWindow').html("<p>Zorkington: a basic text based adventure made using hashes in JavaScript at Burlington Code Academy. <br><a href='https://github.com/djmorosini/zorkington' target='_blank'>Zorkington GitHub Page</a></p>")
+            $('#storyWindow').html(projectDescriptions.zorkington)
+        }
         }
 
         function insertPomodoro(){
+            if (!$('#Pomodoro').parent().hasClass('activeProject')){
+            resetActive();
+            $('#Pomodoro').parent().addClass('activeProject')
             $('#bannerImg').html("<img class='imagelink hidden' src='images/pomodoroThumborig.png'>").prop('href', 'pomodoro')
             jQuery('.imagelink').fadeIn(400)
-            $('#storyWindow').html("<p>A timer webapp based on the Pomodoro method <br> <a href='https://github.com/deadlion2ttip/pomodoro' target='_blank'>Pomodoro GitHub Page</a></p>")
+            $('#storyWindow').html(projectDescriptions.pomodoro)
+        }
         }
 
         function insertYelpington(){
+            if (!$('#Yelpington').parent().hasClass('activeProject')){
+            resetActive();
+            $('#Yelpington').parent().addClass('activeProject')
             $('#bannerImg').html("<img class='imagelink hidden' src='images/yelpingtontnorig.png'>").prop('href', 'https://limitless-thicket-25617.herokuapp.com/')
             jQuery('.imagelink').fadeIn(400)
-            $('#storyWindow').html("<p>A restaurant review site using Leaflet maps api and using AJAX<br><a href='https://github.com/deadlion2ttip/yelpington'target='_blank'>Yelpington GitHub Page</a></p>")
+            $('#storyWindow').html("<p>"+ projectDescriptions.yelpington +"</p>")
         }
-
+}
     </script>
 </body>
 </html>

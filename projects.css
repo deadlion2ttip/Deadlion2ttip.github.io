@@ -9,6 +9,7 @@ body {
 }
 .imagelink {
     width: 100%;
+    height: 100%;
     border-radius: 5%;
 }
 .hidden{
@@ -78,11 +79,12 @@ nav {
 #projectSelector{
     color: white;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    padding-top: 30px;
-    background-color: rgba(139, 139, 139, 0.6)
+    background-color: rgba(165, 165, 165, 0.4)
+}
+.activeProject{
+    background-color: rgba(132, 132, 132, 0.4);
 }
 section {
     width:100%;
@@ -98,24 +100,6 @@ section {
 h3 {
     font-size: 24pt;
     text-align: center;
-}
-.exampleJustify{
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: 35%;
-    margin: 0px 5% 0px 5%;
-}
-.projectContainer{
-    border: 1px solid lightgray;
-    border-radius: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    margin: 20px 30px;
-    overflow: hidden;
-    background-color: rgb(185, 185, 185)
 }
 p{
     text-align: center;
@@ -135,6 +119,20 @@ a:hover{
 }
 #projectImgDiv {
     margin: 0px;
+}
+.projectName {
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    padding: 15px;
+
+}
+
+.button{
+    border: 4px solid white;
+    border-radius: 12%;
+    color: white;
+    padding: 5px;
 }
 
 @media (max-width: 600px){
@@ -171,5 +169,8 @@ a:hover{
     }
     h3{
         font-size: 15pt
+    }
+    .projectName{
+        padding:5px;
     }
 }
