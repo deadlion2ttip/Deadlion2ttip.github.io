@@ -30,8 +30,6 @@
         font-weight: 500;
         color:whitesmoke;
         text-align: center;
-        /* margin-left: auto;
-        margin-right: auto; */
     }
     .flexbox {
         grid-row: 2;
@@ -135,13 +133,13 @@
             <a href='contact.html' class='menuItem button'><p>Social Media</p></a>
         </nav>
     </div>
-    
     <script>
         let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'deathvalley.JPG','MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','zion.JPG', 'redclay.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
         
         
         function setBackground() {
-            body = document.getElementsByTagName('body')[0]
+            body = document.getElementsByTagName('body')[0];
+            body.style = 'background: url("images/compressed/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
             body.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
             console.log(body.style)
         }
