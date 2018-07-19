@@ -3,58 +3,157 @@
 <html>
 <head>
     <title>Chris's Projects</title>
-    <link href="projects.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="projects.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <header>
         <a href='index.html'><div id="name">Christopher Griffin</div></a>
         <nav>
-            <a class='navbar' href='About.html'>About</a>
-            <a class='navbar activePage' href='projects.html'>Projects</a>
-            <a class='navbar' href='contact.html'>Social</a>
+            <a class='sitenavbar' href='About.html'>About</a>
+            <a class='sitenavbar activePage' href='projects.html'>Projects</a>
+            <a class='sitenavbar' href='contact.html'>Contact</a>
         </nav>
     </header>
     <hr id='headerbreak'>
-    <section>
-        <div id='headerDiv'>
-            <h3>What Chris Has Been Working On</h3>
-        </div>
-        <div class='exampleJustify'>
-            <div class='projectContainer'>
-                <a href="zorkdata/zorkington.html" target="_blank">
-                    <img class='imagelink' src='images/zorkingtonthumbnail.jpg'>
-                </a>
+    <section class='container-fluid'>
+        <div class='row'>  
+                <div id='projectSelector'>
+                    <span class='activeProject projectName'><h5 id='Zorkington' class='button'>
+                        Zorkington
+                    </h5></span>
+                    <span class="projectName"><h5 id='Pomodoro' class="button">
+                        Pomodoro Timer
+                    </h5></span>
+                    <span class="projectName"><h5 id='Yelpington' class="button">
+                        Yelpington
+                    </h5></span>
+                    <span class="projectName"><h5 id='GeoVermonter' class="button">
+                        Geo-Vermonter
+                    </h5></span>
+                </div>
+            </div>
+        <div id='projectImgDiv' class="jumbotron row jumbotron-fluid">
+            <div class='row'>
+                    <a href='zorkdata/zorkington.html' target='_blank_' id='bannerImg' class='col-sm-5'>
+                <img class='imagelink show' src='images/zorkingtonthumbnailorig.png'>
+                    </a>
+            <div class='col-sm-7' id='storyWindow'>
                 <p>
-                    Zorkington: a basic text based adventure made using hashes in JavaScript at Burlington Code Academy. <br>
-                    <a href="https://github.com/djmorosini/zorkington" target="_blank">
-                        Zorkington GitHub Page
+                        A text based adventure coded in JavaScript during week 3 at Burlington Code Academy. Using hashes and state machines, the game keeps track of actions available in each location and tracks a player inventory. 
+                    </p>
+                        <div class='spaceAroundFlexbox'>
+                        <a id='ghLink' href="https://github.com/djmorosini/zorkington" target="_blank">
+                        <img class= 'ghButton' src='images/GitHub-Logos/GitHub_Logo_White.png'>
                     </a>
-                </p>
-            </div>
-            <div class='projectContainer'>
-                <a href="pomodoro" target="_blank">
-                    <img class='imagelink' src='images/pomodoroThumb.jpg'>
-                </a>
-                <p>A timer webapp based on the Pomodoro method <br>
-                    <a href="https://github.com/deadlion2ttip/pomodoro" target="_blank">
-                        Pomodoro GitHub Page
+                    <a id='projectLink' href="zorkdata/zorkington.html" target="_blank">
+                        <div class='viewProject'>View</div>
                     </a>
-                </p>
+                    </div>
+                
             </div>
-            <div class='projectContainer'>
-                <a href="https://limitless-thicket-25617.herokuapp.com/" target="_blank">
-                    <img class='imagelink' src='images/yelpingtontn.jpg'>
-                </a>
-                <p>A restaurant review site using Leaflet maps api and using AJAX<br>
-                    <a href="https://github.com/deadlion2ttip/yelpington" target="_blank">
-                        Yelpington GitHub Page
-                    </a>
-                </p>
-            </div>
+        </div>
         </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script>
+        let projectsHash = {
+            'zorkington': {
+                'description' : "A text based adventure coded in JavaScript during week 3 at Burlington Code Academy. Using hashes and state machines, the game keeps track of actions available in each location and tracks a player inventory.",
+                'ghLink' : 'https://github.com/djmorosini/zorkington',
+                'projectLink': 'zorkdata/zorkington.html',
+                'image': 'images/zorkingtonthumbnailorig.png',
+            },
+            'pomodoro': {
+                'description': "A timer webapp based on the Pomodoro method coded in JavaScript and hosted on GitHub Pages. Created during week 5 at Burlington Code Academy.",
+                'ghLink': 'https://github.com/deadlion2ttip/pomodoro',
+                'projectLink': 'pomodoro',
+                'image': 'images/pomodoroThumborig.png',
+            },
+            'yelpington': {
+                'description': "A restaurant review site using Leaflet maps, OpenStreetMaps API, and using AJAX to load in data from JSON files. The map and index restaurant list construction are done on the fly using data from JSON files in the root folder. Hosted using Heroku. Created week 5 at Burlington Code academy.",
+                'ghLink': 'https://github.com/deadlion2ttip/yelpington',
+                'projectLink': 'https://limitless-thicket-25617.herokuapp.com/',
+                'image': 'images/yelpingtontnorig.png',
+            },
+            'geoVermonter': {
+                'description': 'A web based game utilizing Bootstrap, leaflet, and the OpenStreetMap API. It uses geocoding to find a random point in Vermont, then the user explores a zoomed in map to try to guess which county their point landed in. Created week 6 at Burlington Code Academy.',
+                'ghLink': "https://github.com/trose6382/geo-vermonter",
+                'projectLink': 'https://calm-gorge-67638.herokuapp.com/#',
+                'image': 'images/geo-Vermont.png'
+        },
+        }
+        $('#Pomodoro').on('mouseover', function() {
+            insertPomodoro();
+        })
+
+        $('#Zorkington').on('mouseover', function() {
+            insertZorkington();
+        })
+
+        $('#Yelpington').on('mouseover', function(){
+            insertYelpington();
+        })
+
+        $('#GeoVermonter').on('mouseover', function(){
+            insertgeoVermonter()
+        })
+        
+        function resetActive(){
+            $('.activeProject').removeClass('activeProject')
+        }
+        function insertZorkington(){
+        if (!$('#Zorkington').parent().hasClass('activeProject')){
+            resetActive();
+            $('#Zorkington').parent().addClass('activeProject')
+            $('#bannerImg').html("<img class='imagelink hidden' src="+ projectsHash.zorkington.image + ">").prop('href', 'zorkdata/zorkington.html')
+            jQuery('.imagelink').fadeIn(400)
+            $('#storyWindow p').html(projectsHash.zorkington.description)
+            $('#ghLink').prop('href', projectsHash.zorkington.ghLink)
+            $('#projectLink').prop('href', projectsHash.zorkington.projectLink)
+        }
+        }
+
+        function insertPomodoro(){
+            if (!$('#Pomodoro').parent().hasClass('activeProject')){
+            resetActive();
+            $('#Pomodoro').parent().addClass('activeProject')
+            $('#bannerImg').html("<img class='imagelink hidden' src="+ projectsHash.pomodoro.image+">").prop('href', 'pomodoro')
+            jQuery('.imagelink').fadeIn(400)
+            $('#storyWindow p').html(projectsHash.pomodoro.description)
+            $('#ghLink').prop('href', projectsHash.pomodoro.ghLink)
+            $('#projectLink').prop('href', projectsHash.pomodoro.projectLink)
+        }
+        }
+
+        function insertYelpington(){
+            if (!$('#Yelpington').parent().hasClass('activeProject')){
+            resetActive();
+            $('#Yelpington').parent().addClass('activeProject')
+            $('#bannerImg').html("<img class='imagelink hidden' src="+ projectsHash.yelpington.image+">").prop('href', 'https://limitless-thicket-25617.herokuapp.com/')
+            jQuery('.imagelink').fadeIn(400)
+            $('#storyWindow p').html(projectsHash.yelpington.description)
+            $('#ghLink').prop('href', projectsHash.yelpington.ghLink)
+            $('#projectLink').prop('href', projectsHash.yelpington.projectLink)
+        }
+}
+function insertgeoVermonter(){
+            if (!$('#GeoVermonter').parent().hasClass('activeProject')){
+            resetActive();
+            $('#GeoVermonter').parent().addClass('activeProject')
+            $('#bannerImg').html("<img class='imagelink hidden' src="+ projectsHash.geoVermonter.image+">").prop('href', projectsHash.geoVermonter.projectLink)
+            jQuery('.imagelink').fadeIn(400)
+            $('#storyWindow p').html(projectsHash.geoVermonter.description)
+            $('#ghLink').prop('href', projectsHash.geoVermonter.ghLink)
+            $('#projectLink').prop('href', projectsHash.geoVermonter.projectLink)
+        }
+        }
+
+    </script>
 </body>
 </html>
