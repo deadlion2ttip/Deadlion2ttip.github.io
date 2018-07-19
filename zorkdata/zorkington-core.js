@@ -60,7 +60,7 @@ function mainGame(chunk) {
     log = document.getElementById('log')
     log.innerHTML = ''
     say('Current location: ' + currentRoom + '\n')
-    let playerInput = chunk.toString().trim();
+    let playerInput = chunk.toString().trim().toLowerCase();
     let firstWordOfInput = playerInput.split(' ').shift().toString()
     say("\n")
     

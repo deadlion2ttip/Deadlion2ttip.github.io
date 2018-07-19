@@ -12,14 +12,14 @@ body {
     height: 100%;
     border-radius: 5%;
 }
-.hidden{
-    display: none;
-}
-.projectContainer:Hover {
-    box-shadow: 0px 0px 3px;
-    position: relative;
+.imagelink:Hover {
+    border: 10px solid;
+    border-color: #ceefee;
     bottom: 4px;
     right: 4px;
+}
+.hidden{
+    display: none;
 }
 header {
     background: linear-gradient(0deg, #ceefee, white);
@@ -127,7 +127,20 @@ a:hover{
     padding: 15px;
 
 }
+.ghButton{
+    background-color: black;
+    border-radius: 5%;
+    height: 35px;
+    width: 85px;
+    box-shadow: black 4px 4px 2px;
+}
+.ghButton:hover {
+    position: relative;
+    bottom: -2px;
+    left: 2px;
+    box-shadow: black 2px 2px 2px;
 
+}
 .button{
     border: 4px solid white;
     border-radius: 12%;
