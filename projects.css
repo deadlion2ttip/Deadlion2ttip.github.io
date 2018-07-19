@@ -184,6 +184,10 @@ a:hover{
         font-size: 15pt
     }
     .projectName{
-        padding:5px;
+        padding:4px;
+    }
+    .button{
+        font-size: 10pt;
+        margin-bottom: 0px;
     }
 }
