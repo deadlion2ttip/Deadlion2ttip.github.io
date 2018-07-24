@@ -134,10 +134,10 @@ a:hover{
     justify-content: space-around;
 }
 .viewProject{
-        background-color: #fcc79a;
+        background-color: #D7F7D5;
         color: black !important;
         border: 2px solid black;
-        border-radius: 5%;
+        border-radius: 10%;
         height: 35px;
         width: 85px;
         box-shadow: black 4px 4px 2px;
@@ -152,7 +152,7 @@ a:hover{
 }
 .ghButton{
     background-color: black;
-    border-radius: 5%;
+    border-radius: 10%;
     height: 35px;
     width: 85px;
     box-shadow: black 4px 4px 2px;
