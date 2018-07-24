@@ -133,17 +133,16 @@
         </nav>
     </div>
     <script>
+        let pictureIndex=0;
         let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','Zion.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
-        
         
         function setBackground() {
             body = document.getElementsByTagName('body')[0];
             body.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
             console.log(body.style)
         }
-        let pictureIndex=0;
+
         function backgroundScroll() {
-            
             setInterval(setBackground, 5000)
         }
         
