@@ -85,6 +85,9 @@
     p{
         margin: 0px !important;
     }
+    backgroundPreload{
+        display: none;
+    }
     @media screen and (min-width:600px) and (max-width: 900px) {
         #contentwindow {
             font-size: 20pt;
@@ -119,6 +122,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+    <div id='backgroundPreload'></div>
     <div class='container-fluid'id='contentwindow'>
         <div id='nameContact'>
             <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
@@ -133,6 +137,7 @@
         </nav>
     </div>
     <script>
+        //Create two divs with the same class that alternate between being hidden and shown. The hidden one loads the next background, then fades in as the shown one fades out. Can use jquery to find both objects, then for loop with if statements checking display css.
         let pictureIndex=0;
         let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','Zion.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
         
@@ -152,7 +157,7 @@
             }
             let picPathEnd = picPathArray[pictureIndex]
             pictureIndex++
-            document.getElementById('contentwindow').style = 'background: url("images/indexphotos/' + picPathArray[pictureIndex] + '") no-repeat -9999px -9999px'
+            document.getElementById('backgroundPreload').style = 'background: url("images/indexphotos/' + picPathArray[pictureIndex] + '") no-repeat -9999px -9999px'
             console.log(picPathEnd)
             return picPathEnd
         }
