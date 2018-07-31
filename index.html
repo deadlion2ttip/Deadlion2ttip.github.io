@@ -1,8 +1,9 @@
   <!DOCTYPE html>
  <style>
-    body {
+    #index-frame {
         background: url("images/indexphotos/yosemite.JPG") no-repeat center center fixed;
-        background-size: cover;     
+        background-size: cover; 
+        height: 900px;    
     }
     #contentwindow {
         background: rgba(25, 25, 25, 0.5) !important;
@@ -36,7 +37,7 @@
         display: flex;
         justify-content: center;
     }
-    nav {
+    #index-nav {
         width: 100%;
         grid-row:4;
         align-self: flex-end;
@@ -110,13 +111,14 @@
         .button {
             width: 60%;
         }
-        nav{
+        #index-nav{
             flex-direction: column;
         }
     }
 </style>
 <html>
 <head>
+    <link href="about.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Shrikhand" rel="stylesheet">
     <title>Chris Griffin | Fullstack Web Developer</title>
@@ -124,6 +126,7 @@
 </head>
 <body>
     <div id='backgroundPreload'></div>
+    <div id='index-frame'>
     <div class='container-fluid'id='contentwindow'>
         <div id='nameContact'>
             <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
@@ -131,21 +134,40 @@
                 <a class='menuItem email contactItem' href="mailto:cisaacgriffin@gmail.com"> cisaacgriffin@gmail.com </a>
             </div>
         </div>
-        <nav>
+        <div id='index-nav'>
             <a href='About.html' class='menuItem button'><p>About Chris</p></a>
             <a href='projects.html' class='menuItem button'><p>Projects</p></a>
             <a href='contact.html' class='menuItem button'><p>Social Media</p></a>
-        </nav>
+        </div>
     </div>
+    </div>
+    <div id="about-frame">
+            <aside>
+            <a href='https://youtu.be/z8pknnncODo' target="_blank">
+                <img id="portrait" src="images/Chicken.jpg" alt='Christopher Griffin holding a small brown chicken.'>
+            </a>
+            <!-- replace with leaflet eventually -->
+            <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1o2gQuC-C7C1GB33t5qN-R4u1XDNmU_nL"></iframe>
+            </aside>
+            <section>
+                <div>Chris is studying to be a full stack web developer at Burlington Code Academy and has experience with <b>JavaScript, Node.js, Bootstrap, jQuery, HTML5, CSS, NoSQL,</b> and many other technologies.  This is an exciting transition in his life and he's excited to put his skills, new and established, to work for an organization with purpose.<br><br>
+            
+                    Chris has worked an assortment of positions in his professional life. He solved client IT problems for four years as a team lead for the University of Vermont's Techteam while earning bachelors degrees in wildlife biology and psychology. Since graduation he has tracked tortoises in the Mojave desert, taught curious learners of all ages at an outdoor education center in Bethlehem, New York, and researched raccoons around Burlington's urban landscape. He enjoyed the natural resources field but looks forward to the opportunity to use his other passion, technology, in a professional field that better fits his needs. His passions include hiking, puzzles, folk dance, knowing the names of all the trees, and playing way too much Overwatch. <br><br>
+            
+                Chris is an amateur photographer, and all of the background photography on this site is his work.
+                </div>
+            </section>
+            
+            </div>
     <script>
         //Create two divs with the same class that alternate between being hidden and shown. The hidden one loads the next background, then fades in as the shown one fades out. Can use jquery to find both objects, then for loop with if statements checking display css.
         let pictureIndex=0;
         let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','Zion.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
         
         function setBackground() {
-            body = document.getElementsByTagName('body')[0];
-            body.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
-            console.log(body.style)
+            indexFrame = document.getElementById('index-frame');
+            indexFrame.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
+            console.log(indexFrame.style)
         }
 
         function backgroundScroll() {
