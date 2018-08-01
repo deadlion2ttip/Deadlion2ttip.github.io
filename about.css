@@ -5,9 +5,10 @@
     background: url('images/aboutbackground.jpg') no-repeat center center fixed;
     background-size: 100% 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 800px;
+    height: auto;
     display: flex;
     justify-content: space-around;
+    padding: 25px 50px;
 }
     #portrait {
         border-radius: 20%;
@@ -54,14 +55,15 @@
         margin-top:0%;
     }
 
+
     aside{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 10px 20px;
+        margin: 10px 0px 10px 20px;
     }
     section {
-        margin: 20px 40px auto 40px;
+        margin: 20px 0px auto 0px;
         height: auto;
         order: -1;
         display:flex;
@@ -103,8 +105,9 @@
             justify-content: space-around;
         }
         aside {
-            display: flex;
+            display: flex !important;
             justify-content: center;
+            margin: 10px 20px;
         }
         #header-name{
             font-size: 30pt;
@@ -117,17 +120,21 @@
             align-content: center;
             font-size: 12pt;
             width: 90%;
+            margin: 20px, 0px;
         }
         #about-frame{
             flex-direction: column-reverse;
             align-items: center;
-            height: 1500px;
-
+            padding: 25px 10px;
         }
         #portrait {
             width: 250px;
             height: 300px;
             margin-right: 0px;
 
+        }
+        .map{
+            height: 250px;
+            width: 250px;
         }
     }
