@@ -121,6 +121,7 @@
         }
         #body{
             flex-direction: column-reverse;
+            background: url('images/aboutbackgroundmobile.jpg') no-repeat center center fixed;
             align-items: center;
 
         }

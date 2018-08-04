@@ -116,8 +116,8 @@ a{
     section{
         font-size: 12pt;
     }
-    #body{
-        font-size: 12pt;
+    body{
+        background: url('images/contactbackgroundmobile.jpg') no-repeat center center fixed;
     }
     .exampleJustify{
         margin: 0px;
