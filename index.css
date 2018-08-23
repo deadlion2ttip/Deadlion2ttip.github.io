@@ -84,9 +84,11 @@
 p{
     margin: 0px !important;
 }
-#backgroundPreload{
-    background: url('images/indexphotos/rainbow.JPG') -9999px -9999px no-repeat;
+.backgroundPreload{
     display: none;
+}
+#index-frame .backgroundPreload{
+    background: url('images/indexphotos/rainbow.JPG') -9999px -9999px no-repeat;
 }
 #headerDiv {
     display: flex;
@@ -123,7 +125,7 @@ p{
     font-size: 26pt;
     font-weight: 500;
 }
-    .button {
+    #index-frame .button {
         width: 60%;
     }
     #index-nav{
