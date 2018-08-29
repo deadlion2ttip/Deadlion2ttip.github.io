@@ -71,6 +71,7 @@
     border-radius: 12%;
     padding: 0px 5px;
     margin: 15px 0px;
+    color: white;
 }
 .button:hover{
     border-color: rgb(61, 216, 255);

@@ -60,7 +60,7 @@ function insertProject(projectName){
     $('#'+ projectName+'').parent().addClass('activeProject')
     $('#bannerImg').html("<img class='imagelink hidden' src="+ projectsHash[projectName].image+">").prop('href', projectsHash[projectName].projectLink)
     jQuery('.imagelink').fadeIn(400)
-    $('#storyWindow p').html(projectsHash[projectName].description)
+    $('#storyWindow > p').html(projectsHash[projectName].description)
     $('#ghLink').prop('href', projectsHash[projectName].ghLink)
     $('#projectLink').prop('href', projectsHash[projectName].projectLink)
 }
