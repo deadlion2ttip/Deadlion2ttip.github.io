@@ -134,13 +134,6 @@ section{
         margin: 0px;
         justify-content: space-around;
     }
-    #name{
-        font-size: 30pt;
-        text-align: center;
-        width: 100%;
-        margin: 0px;
-    }
-    
     section{
         font-size: 12pt;
     }

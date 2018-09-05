@@ -49,7 +49,10 @@
     margin-bottom: 0px;
     text-align: center;
 }
+.share-btn{
+    width: 250px;
 
+}
 #contact{
     text-decoration: none;
     font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
@@ -131,5 +134,8 @@ p{
     }
     #index-nav{
         flex-direction: column;
+    }
+    .share-btn{
+        order:2;
     }
 }
