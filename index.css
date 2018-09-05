@@ -1,0 +1,142 @@
+#index-frame {
+    background: url("images/indexphotos/yosemite.JPG") no-repeat center center fixed;
+    background-size: cover; 
+    height: 950px;    
+}
+#contentwindow {
+    background: rgba(25, 25, 25, 0.5) !important;
+    margin: 25px auto 25px auto;
+    box-sizing: border-box;
+    border-radius: 8%;
+    width:90%;
+    height:900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    vertical-align:middle;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+}
+#name {
+    font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+    font-size: 70pt;
+    font-weight: 500;
+    color:whitesmoke;
+    text-align: center;
+}
+.flexbox {
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+}
+#index-nav {
+    width: 100%;
+    grid-row:4;
+    align-self: flex-end;
+    display: flex !important;
+    align-items: center;
+    justify-content:space-around;
+}
+.menuItem {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.share-btn{
+    width: 250px;
+
+}
+#contact{
+    text-decoration: none;
+    font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+    color:whitesmoke;
+    text-align: center;
+    margin-top:20px;
+}
+.contactItem {
+    color:whitesmoke !important;
+    text-emphasis-color: none;
+}
+.email:hover {
+    color: rgb(61, 216, 255) !important;
+}
+.button{
+    border-width: 4px;
+    border-style:solid;
+    border-color: white;
+    border-radius: 12%;
+    padding: 0px 5px;
+    margin: 15px 0px;
+    color: white;
+}
+.button:hover{
+    border-color: rgb(61, 216, 255);
+    text-decoration: none;
+}
+.button:hover p {
+    color: rgb(61, 216, 255);
+    text-decoration: none;
+    text-shadow: black 4px 2px 2px;
+}
+p{
+    margin: 0px !important;
+}
+.backgroundPreload{
+    display: none;
+}
+#index-frame .backgroundPreload{
+    background: url('images/indexphotos/rainbow.JPG') -9999px -9999px no-repeat;
+}
+#headerDiv {
+    display: flex;
+    justify-content: flex-start;
+}
+.section-header{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 24pt; 
+    font-family: 'Fjalla One', sans-serif;
+    color: slategray;
+    text-decoration: none;
+}
+@media screen and (min-width:600px) and (max-width: 900px) {
+    #contentwindow {
+        font-size: 20pt;
+        height: 900px;
+    }
+    #name {
+    font-size: 40pt;
+    font-weight: 500;
+}
+
+}
+@media screen and (max-width: 600px) {
+    #index-frame{
+        height: 600px;
+    }
+    #contentwindow {
+        margin: 20px auto;
+        height: 510px;
+        font-size: 12pt;
+    }
+    #name {
+    font-size: 26pt;
+    font-weight: 500;
+}
+    #index-frame .button {
+        width: 60%;
+    }
+    #index-nav{
+        flex-direction: column;
+    }
+    .share-btn{
+        order:2;
+    }
+}

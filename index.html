@@ -1,153 +1,127 @@
   <!DOCTYPE html>
- <style>
-    body {
-        background: url("images/indexphotos/yosemite.JPG") no-repeat center center fixed;
-        background-size: cover;     
-    }
-    #contentwindow {
-        background: rgba(25, 25, 25, 0.5) !important;
-        margin: auto;
-        box-sizing: border-box;
-        border-radius: 8%;
-        width:90%;
-        height:90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        position:absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        vertical-align:middle;
-        color: white;
-        font-family:Arial, Helvetica, sans-serif;
-        font-size: 20pt;
-    }
-    #name {
-        font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
-        font-size: 70pt;
-        font-weight: 500;
-        color:whitesmoke;
-        text-align: center;
-    }
-    .flexbox {
-        grid-row: 2;
-        display: flex;
-        justify-content: center;
-    }
-    nav {
-        width: 100%;
-        grid-row:4;
-        align-self: flex-end;
-        display: flex !important;
-        align-items: center;
-        justify-content:space-around;
-    }
-    .menuItem {
-        color: whitesmoke;
-        text-decoration: none;
-        margin-bottom: 0px;
-        text-align: center;
-    }
-    
-    #contact{
-        text-decoration: none;
-        font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
-        color:whitesmoke;
-        text-align: center;
-        margin-top:20px;
-    }
-    .contactItem {
-        color:whitesmoke !important;
-        text-emphasis-color: none;
-    }
-    .email:hover {
-        color: rgb(61, 216, 255) !important;
-    }
-    .button{
-        border-width: 4px;
-        border-style:solid;
-        border-color: white;
-        border-radius: 12%;
-        padding: 0px 5px;
-        margin: 15px 0px;
-    }
-    .button:hover{
-        border-color: rgb(61, 216, 255);
-        text-decoration: none;
-    }
-    .button:hover p {
-        color: rgb(61, 216, 255);
-        text-decoration: none;
-        text-shadow: black 4px 2px 2px;
-    }
-    p{
-        margin: 0px !important;
-    }
-    #backgroundPreload{
-        background: url('images/indexphotos/rainbow.JPG') -9999px -9999px no-repeat;
-        display: none;
-    }
-    @media screen and (min-width:600px) and (max-width: 900px) {
-        #contentwindow {
-            font-size: 20pt;
-        }
-        #name {
-        font-size: 40pt;
-        font-weight: 500;
-    }
-
-    }
-    @media screen and (max-width: 600px) {
-        #contentwindow {
-            font-size: 12pt;
-        }
-        #name {
-        font-size: 26pt;
-        font-weight: 500;
-    }
-        .button {
-            width: 60%;
-        }
-        nav{
-            flex-direction: column;
-        }
-    }
-</style>
-<html>
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <html>
+  <head>
+        <title>Chris Griffin | Fullstack Web Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Shrikhand" rel="stylesheet">
-    <title>Chris Griffin | Fullstack Web Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel='stylesheet' href='index.css' type="text/css">
+    <link href="about.css" rel="stylesheet" type="text/css">
+    <link href="projects.css" rel="stylesheet" type="text/css">
+    <!-- Media Buttons -->
+    <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5b8fe85711e1d40011d81383&product=inline-follow-buttons"></script>
+
 </head>
 <body>
-    <div id='backgroundPreload'></div>
-    <div class='container-fluid'id='contentwindow'>
-        <div id='nameContact'>
-            <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
-            <div id='contact'> <span class='contactItem phone'> (973) 294-5121 |</span>
-                <a class='menuItem email contactItem' href="mailto:cisaacgriffin@gmail.com"> cisaacgriffin@gmail.com </a>
+    <div class='backgroundPreload' id='indexPreload'></div>
+    <div id='index-frame'>
+        <div class='container-fluid'id='contentwindow'>
+            <div id='nameContact'>
+                <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
+                <div id='contact'> <span class='contactItem phone'> (973) 294-5121 |</span>
+                    <a class='menuItem email contactItem' href="mailto:cisaacgriffin@gmail.com"> cisaacgriffin@gmail.com </a>
+                </div>
+            </div>
+            <div id='index-nav'>
+                <a href='#about-frame' class='menuItem button'><p>About Chris</p></a>
+                
+                <div class="share-btn sharethis-inline-follow-buttons"></div>
+            
+                <a href='#projects-Frame' class='menuItem button'><p>Projects</p></a>
             </div>
         </div>
-        <nav>
-            <a href='About.html' class='menuItem button'><p>About Chris</p></a>
-            <a href='projects.html' class='menuItem button'><p>Projects</p></a>
-            <a href='contact.html' class='menuItem button'><p>Social Media</p></a>
-        </nav>
     </div>
+
+    <div id='projects-Frame'>
+        <div class='backgroundPreload' id='projectsPreload'></div>
+            <section class='container-fluid'>
+                <div class='row'>  
+                        <div id='projectSelector'>
+                            <span class='activeProject projectName'><h5 id='Zorkington' class='button'>
+                                Zorkington
+                            </h5></span>
+                            <span class="projectName"><h5 id='Pomodoro' class="button">
+                                Pomodoro Timer
+                            </h5></span>
+                            <span class="projectName"><h5 id='Yelpington' class="button">
+                                Yelpington
+                            </h5></span>
+                            <span class="projectName"><h5 id='GeoVermonter' class="button">
+                                Geo-Vermonter
+                            </h5></span>
+                            <span class="projectName"><h5 id='chat' class="button">
+                                Simple Chat
+                            </h5></span>
+                        </div>
+                    </div>
+                <div id='projectImgDiv' class="jumbotron row jumbotron-fluid">
+                    <div class='row'>
+                            <a href='zorkdata/zorkington.html' target='_blank_' id='bannerImg' class='col-sm-5'>
+                        <img class='imagelink show' src='images/zorkingtonthumbnailorig.jpg'>
+                            </a>
+                    <div class='col-sm-7' id='storyWindow'>
+                        <p>
+                                A text based adventure coded in JavaScript during week 3 at Burlington Code Academy. Using hashes and state machines, the game keeps track of actions available in each location and tracks a player inventory. 
+                            </p>
+                                <div class='spaceAroundFlexbox'>
+                                <a id='ghLink' class='button' href="https://github.com/djmorosini/zorkington" target="_blank">
+                                <img class='ghButton' src='images/GitHub-Logos/GitHub_Logo_White.png'>
+                            </a>
+                            <a id='projectLink' href="zorkdata/zorkington.html" target="_blank">
+                                <div class='button'><p>View</p></div>
+                            </a>
+                            </div>
+                        
+                    </div>
+                </div>
+                </div>
+            </section>
+            </div>
+    
+
+
+    <div id="about-frame">
+        
+        <aside>
+            <a href='https://youtu.be/z8pknnncODo' target="_blank">
+                <img id="portrait" src="images/Chicken.jpg" alt='Christopher Griffin holding a small brown chicken.'>
+            </a>
+            <!-- replace with leaflet eventually -->
+            <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1o2gQuC-C7C1GB33t5qN-R4u1XDNmU_nL"></iframe>
+        </aside>
+        <section>
+            <div id='headerDiv'>
+                <h3 class="section-header">About Chris</h3>
+            </div>
+            <div>Chris is studying to be a full stack web developer at Burlington Code Academy and has experience with <b>JavaScript, Node.js, Bootstrap, jQuery, HTML5, CSS, NoSQL,</b> and many other technologies.  This is an exciting transition in his life and he's excited to put his skills, new and established, to work for an organization with purpose.<br><br>
+                
+                Chris has worked an assortment of positions in his professional life. He solved client IT problems for four years as a team lead for the University of Vermont's Techteam while earning bachelors degrees in wildlife biology and psychology. Since graduation he has tracked tortoises in the Mojave desert, taught curious learners of all ages at an outdoor education center in Bethlehem, New York, and researched raccoons around Burlington's urban landscape. He enjoyed the natural resources field but looks forward to the opportunity to use his other passion, technology, in a professional field that better fits his needs. His passions include hiking, puzzles, folk dance, knowing the names of all the trees, and playing way too much Overwatch. <br><br>
+                
+                Chris is an amateur photographer, and all of the background photography on this site is his work.
+            </div>
+        </section>
+        
+    </div>
+
+
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="projects.js"></script>
     <script>
         //Create two divs with the same class that alternate between being hidden and shown. The hidden one loads the next background, then fades in as the shown one fades out. Can use jquery to find both objects, then for loop with if statements checking display css.
         let pictureIndex=0;
         let picPathArray = ['rainbow.JPG', 'landing.JPG', 'birdprints.JPG', 'bigbend.JPG', 'carlsbad1.JPG', 'pharaohmountain.JPG', 'forrestedcanyon.JPG', 'scrubplains.JPG', 'arch.JPG', 'coyote.JPG', 'MesaVerde.JPG', 'grandcanyon.JPG', 'Pharaohlake.JPG', 'sandwaves.JPG','Zion.JPG', 'contrast.JPG', 'sunset.JPG', 'yosemite.JPG']
         
         function setBackground() {
-            body = document.getElementsByTagName('body')[0];
-            body.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
-            console.log(body.style)
+            indexFrame = document.getElementById('index-frame');
+            indexFrame.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
+            console.log(indexFrame.style)
         }
-
+        
         function backgroundScroll() {
             setInterval(setBackground, 5000)
         }
@@ -158,11 +132,12 @@
             }
             let picPathEnd = picPathArray[pictureIndex]
             pictureIndex++
-            document.getElementById('backgroundPreload').style = 'background: url("images/indexphotos/' + picPathArray[pictureIndex] + '") no-repeat -9999px -9999px'
+            document.getElementById('indexPreload').style = 'background: url("images/indexphotos/' + picPathArray[pictureIndex] + '") no-repeat -9999px -9999px'
             console.log(picPathEnd)
             return picPathEnd
         }
         backgroundScroll()
     </script>
+
 </body>
 </html>
