@@ -5,11 +5,11 @@ let projectsHash = {
         'projectLink': 'zorkdata/zorkington.html',
         'image': 'images/zorkingtonthumbnailorig.jpg',
     },
-    'Pomodoro': {
-        'description': "A timer webapp based on the Pomodoro method coded in JavaScript and hosted on GitHub Pages. Created during week 5 at Burlington Code Academy.",
-        'ghLink': 'https://github.com/deadlion2ttip/pomodoro',
-        'projectLink': 'pomodoro',
-        'image': 'images/pomodoroThumborig.jpg',
+    'GreenUp': {
+        'description' : 'A web hosted dashboard designed at the behest of Code for BTV and Green Up Vermont. I assembled a team of classmates and used the agile process to develop a dashboard for the display of data collected by a previously created phone app. The dashboard utilizes OOP to organize and distribute data pulled from a Firebase Database, and displays it using leaflet.js and charts.js. The web app is currently live on firebase hosting and is expected to be public facing by the end of the month.',
+        'ghLink' : 'https://github.com/smsvt99/greenupDashboard',
+        'projectLink' : 'https://greenupvermont-de02b.firebaseapp.com',
+        'image' : 'images/greenup.jpg'
     },
     'Yelpington': {
         'description': "A restaurant review site using Leaflet maps, OpenStreetMaps API, and using AJAX to load in data from JSON files. The map and index restaurant list construction are done on the fly using data from JSON files in the root folder. Hosted using Heroku. Created week 5 at Burlington Code academy.",
@@ -30,8 +30,8 @@ let projectsHash = {
         'image': 'images/chattn.jpg'
     }
 }
-$('#Pomodoro').on('mouseover', function() {
-    insertProject('Pomodoro');
+$('#GreenUp').on('mouseover', function() {
+    insertProject('GreenUp');
 })
 
 $('#Zorkington').on('mouseover', function() {

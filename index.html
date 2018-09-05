@@ -11,6 +11,14 @@
     <link href="projects.css" rel="stylesheet" type="text/css">
     <!-- Media Buttons -->
     <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5b8fe85711e1d40011d81383&product=inline-follow-buttons"></script>
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+
 
 </head>
 <body>
@@ -24,11 +32,11 @@
                 </div>
             </div>
             <div id='index-nav'>
-                <a href='#about-frame' class='menuItem button'><p>About Chris</p></a>
+                <a href='#projects-Frame' class='menuItem button'><p>Projects</p></a>
                 
                 <div class="share-btn sharethis-inline-follow-buttons"></div>
             
-                <a href='#projects-Frame' class='menuItem button'><p>Projects</p></a>
+                <a href='#about-frame' class='menuItem button'><p>About Chris</p></a>
             </div>
         </div>
     </div>
@@ -38,11 +46,11 @@
             <section class='container-fluid'>
                 <div class='row'>  
                         <div id='projectSelector'>
-                            <span class='activeProject projectName'><h5 id='Zorkington' class='button'>
+                            <span class='projectName'><h5 id='Zorkington' class='button'>
                                 Zorkington
                             </h5></span>
-                            <span class="projectName"><h5 id='Pomodoro' class="button">
-                                Pomodoro Timer
+                            <span class="activeProject projectName"><h5 id='GreenUp' class="button">
+                                Green Up Dashboard
                             </h5></span>
                             <span class="projectName"><h5 id='Yelpington' class="button">
                                 Yelpington
@@ -57,18 +65,18 @@
                     </div>
                 <div id='projectImgDiv' class="jumbotron row jumbotron-fluid">
                     <div class='row'>
-                            <a href='zorkdata/zorkington.html' target='_blank_' id='bannerImg' class='col-sm-5'>
-                        <img class='imagelink show' src='images/zorkingtonthumbnailorig.jpg'>
+                            <a href='https://greenupvermont-de02b.firebaseapp.com' target='_blank_' id='bannerImg' class='col-sm-5'>
+                        <img class='imagelink show' src='images/greenup.jpg'>
                             </a>
                     <div class='col-sm-7' id='storyWindow'>
                         <p>
-                                A text based adventure coded in JavaScript during week 3 at Burlington Code Academy. Using hashes and state machines, the game keeps track of actions available in each location and tracks a player inventory. 
+                            A web hosted dashboard designed at the behest of Code for BTV and Green Up Vermont. I assembled a team of classmates and used the agile process to develop a dashboard for the display of data collected by a previously created phone app. The dashboard utilizes OOP to organize and distribute data pulled from a Firebase Database, and displays it using leaflet.js and charts.js. The web app is currently live on firebase hosting and is expected to be public facing by the end of the month.
                             </p>
                                 <div class='spaceAroundFlexbox'>
-                                <a id='ghLink' class='button' href="https://github.com/djmorosini/zorkington" target="_blank">
+                                <a id='ghLink' class='button' href="https://github.com/smsvt99/greenupDashboard" target="_blank">
                                 <img class='ghButton' src='images/GitHub-Logos/GitHub_Logo_White.png'>
                             </a>
-                            <a id='projectLink' href="zorkdata/zorkington.html" target="_blank">
+                            <a id='projectLink' href="https://greenupvermont-de02b.firebaseapp.com" target="_blank">
                                 <div class='button'><p>View</p></div>
                             </a>
                             </div>
@@ -88,7 +96,7 @@
                 <img id="portrait" src="images/Chicken.jpg" alt='Christopher Griffin holding a small brown chicken.'>
             </a>
             <!-- replace with leaflet eventually -->
-            <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1o2gQuC-C7C1GB33t5qN-R4u1XDNmU_nL"></iframe>
+            <div id='map'></div>
         </aside>
         <section>
             <div id='headerDiv'>
@@ -111,6 +119,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="projects.js"></script>
+    <script src='chrisMap.js'></script>
     <script>
         //Create two divs with the same class that alternate between being hidden and shown. The hidden one loads the next background, then fades in as the shown one fades out. Can use jquery to find both objects, then for loop with if statements checking display css.
         let pictureIndex=0;

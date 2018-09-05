@@ -82,7 +82,7 @@
     .activePage {
         color: black;
     }
-    .map{
+    #map{
         margin-top: 20px;
         height: 300px;
         width: 300px;
@@ -134,7 +134,7 @@
             margin-right: 0px;
 
         }
-        .map{
+        #map{
             height: 250px;
             width: 250px;
         }
