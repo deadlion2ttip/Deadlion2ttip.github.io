@@ -5,11 +5,11 @@
 }
 #contentwindow {
     background: rgba(25, 25, 25, 0.5) !important;
-    margin: auto;
+    margin: 25px auto 25px auto;
     box-sizing: border-box;
     border-radius: 8%;
     width:90%;
-    height:90%;
+    height:900px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -109,6 +109,7 @@ p{
 @media screen and (min-width:600px) and (max-width: 900px) {
     #contentwindow {
         font-size: 20pt;
+        height: 900px;
     }
     #name {
     font-size: 40pt;
