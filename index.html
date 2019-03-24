@@ -26,7 +26,7 @@
 <body>
     <div class='backgroundPreload' id='indexPreload'></div>
     <div id='index-frame'>
-        <div class='container-fluid'id='contentwindow'>
+        <div id='contentwindow'>
             <div id='nameContact'>
                 <div class='flexbox'><h1 id='name'>CHRISTOPHER I GRIFFIN</h1></div>
                 <div id='contact'> <span class='contactItem phone'> (973) 294-5121 |</span>
@@ -72,7 +72,7 @@
                             </a>
                     <div class='col-sm-7' id='storyWindow'>
                         <p>
-                            A web hosted dashboard designed at the behest of Code for BTV and Green Up Vermont. I assembled a team of classmates and used the agile process to develop a dashboard for the display of data collected by a previously created phone app. The dashboard utilizes OOP to organize and distribute data pulled from a Firebase Database, and displays it using leaflet.js and charts.js. The web app is currently live on firebase hosting and is expected to be public facing by the end of the month.
+                            A web app dashboard designed at the behest of Code for BTV and Green Up Vermont. I assembled a team of classmates and used the agile process to develop a dashboard for the display of data collected by a previously created phone app. The dashboard utilizes OOP to organize and distribute data pulled from a Firebase Database, and displays it using leaflet.js and charts.js. The web app is currently live on firebase hosting and is being extended by Code for BTV
                             </p>
                                 <div class='spaceAroundFlexbox'>
                                 <a id='ghLink' class='button' href="https://github.com/smsvt99/greenupDashboard" target="_blank">
@@ -82,14 +82,11 @@
                                 <div class='button'><p>View</p></div>
                             </a>
                             </div>
-                        
                     </div>
                 </div>
                 </div>
             </section>
             </div>
-    
-
 
     <div id="about-frame">
         
@@ -97,16 +94,20 @@
             <a href='https://youtu.be/z8pknnncODo' target="_blank">
                 <img id="portrait" src="images/Chicken.jpg" alt='Christopher Griffin holding a small brown chicken.'>
             </a>
-            <!-- replace with leaflet eventually -->
             <div alt="A map of Vermont, with a marker on the city of Winooski" id='map'></div>
         </aside>
         <section>
             <div id='headerDiv'>
                 <h3 class="section-header">About Chris</h3>
             </div>
-            <div>Chris is studying to be a full stack web developer at Burlington Code Academy and has experience with <b>JavaScript, Node.js, React and Redux, jQuery, HTML5, CSS, NoSQL,</b> and many other technologies.  This is an exciting transition in his life and he's excited to put his skills, new and established, to work for an organization with purpose.<br><br>
+            <div>
+                Chris has been a web developer for <a target="_blank" href="https://public.vtinfo.com/">VIP (Vermont Information Processing)</a> since 2018, where he works as a .NET and front end web developer for their data visualization tool. Within four months of starting on the project, he proposed and implemented a new css architecture, created a library of new hire project documentation, updated project UI to use modern technologies, and developed numerous new features for customers. Before working for VIP, 
                 
-                Chris has worked an assortment of positions in his professional life. He solved client IT problems for four years as a team lead for the University of Vermont's Techteam while earning bachelors degrees in wildlife biology and psychology. Since graduation he has tracked tortoises in the Mojave desert, taught curious learners of all ages at an outdoor education center in Bethlehem, New York, and researched raccoons around Burlington's urban landscape. He enjoyed the natural resources field but looks forward to the opportunity to use his other passion, technology, in a professional field that better fits his needs. His passions include hiking, puzzles, folk dance, knowing the names of all the trees, and playing way too much Overwatch. <br><br>
+                he taught himself c# and trained as a full stack JavaScript developer at the Burlington Code Academy in VT. He has professional experience with <b>JavaScript, HTML5/CSS, C#, .NET MVC, SQL & NoSQL</b>, and many other technologies.
+                
+                <br /> <br/> Chris has worked an assortment of positions in his professional life. He solved client IT problems for four years as a team lead for the University of Vermont's Techteam while earning bachelors degrees in wildlife biology and psychology. Since graduation he has tracked tortoises in the Mojave desert, taught curious learners of all ages at an outdoor education center in Bethlehem, New York, and researched raccoons around Burlington's urban landscape. He enjoyed the natural resources
+                
+                field but is enjoying the opportunity to use his other passion, technology, in a professional field that better fits his needs. His passions include hiking, puzzles, folk dance, knowing the names of all the trees, and playing way too much Overwatch.
                 
                 Chris is an amateur photographer, and all of the background photography on this site is his work.
             </div>
@@ -129,7 +130,6 @@
         function setBackground() {
             indexFrame = document.getElementById('index-frame');
             indexFrame.style = 'background: url("images/indexphotos/' + nextBackground() + '") no-repeat center center fixed; \n background-size: cover;'
-            console.log(indexFrame.style)
         }
         
         function backgroundScroll() {
@@ -143,19 +143,18 @@
             let picPathEnd = picPathArray[pictureIndex]
             pictureIndex++
             document.getElementById('indexPreload').style = 'background: url("images/indexphotos/' + picPathArray[pictureIndex] + '") no-repeat -9999px -9999px'
-            console.log(picPathEnd)
             return picPathEnd
         }
         backgroundScroll()
 
 
         $(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+                event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 700);
-});
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 700);
+            });
     </script>
 
 </body>
